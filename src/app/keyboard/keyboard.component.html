@@ -1,0 +1,13 @@
+<div id="p-wrapper">
+	<ul id="piano">	
+		<li *ngFor="let pianoKey of pianoKeys">
+			<div class="anchor" selected="true" (click)="keyPress(pianoKey.whiteKeyId)" [id]="pianoKey.whiteKeyId"></div>
+			<div *ngFor="let key of KeyPadToKeyId[keyType]">
+				<strong *ngIf="key.KeyId == pianoKey.whiteKeyId">{{key.KeyPad}}</strong>
+			</div>
+			<span *ngIf="pianoKey.blackKeyId" (click)="keyPress(pianoKey.blackKeyId)" [id]="pianoKey.blackKeyId"></span>
+		</li>
+		<button class="btn btn-success glyphicon glyphicon-random" (click)="changeKey()"></button>
+	</ul>
+</div>
+

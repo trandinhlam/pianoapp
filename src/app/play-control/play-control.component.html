@@ -1,0 +1,12 @@
+<div class="panel">
+	<div class="header">{{ title }}</div>
+	<div class="content">
+		<div class="row">
+			<span>tutorial Piano App</span>
+		</div>
+		<div class="row">
+			<button id="play-btn" class="btn btn-default" (click)="handlePlayBtnClick()" [class.selected]="mode == PianoMode.Play">Play</button>
+			<button id="quiz-btn" class="btn btn-default" (click)="handleQuizBtnClick()" [class.selected]="mode == PianoMode.Quiz">Quiz</button>
+		</div>
+	</div>
+</div>
